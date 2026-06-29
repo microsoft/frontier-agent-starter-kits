@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontier Firm Agent Starter Kits | Built by Microsoft</title>
+  <meta name="description" content="Downloadable, ready-to-use Microsoft Copilot Studio agent starter kits. Each kit packages a pitch deck, example knowledge files, and a setup & evaluation guide." />
+  <meta name="theme-color" content="#0078d4" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip" href="#top">Skip to main content</a>
+
+<!-- =========================================================== HEADER -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="brand-mark">🚀</span>
+      <span class="brand-name">Frontier Firm Agent Starter Kits</span>
+      <span class="brand-by">
+        <svg class="ms-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" aria-hidden="true" focusable="false">
+          <path fill="#F25022" d="M1 1h10v10H1z"/>
+          <path fill="#7FBA00" d="M12 1h10v10H12z"/>
+          <path fill="#00A4EF" d="M1 12h10v10H1z"/>
+          <path fill="#FFB900" d="M12 12h10v10H12z"/>
+        </svg>by Microsoft
+      </span>
+    </a>
+    <nav class="primary-nav">
+      <a href="#kits">Kits</a>
+      <a class="nav-cta" href="https://github.com/microsoft/frontier-agent-starter-kits" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">◐</button>
+  </div>
+</header>
+
+<!-- =========================================================== HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="wrap hero-wrap">
+    <div class="hero-eyebrow">Built by Microsoft · Copilot Growth &amp; Incubation Team</div>
+    <h1 class="hero-title">
+      Launch agents your teams<br />
+      <em>actually</em> adopt with
+      <span class="grad">Microsoft Copilot</span>
+    </h1>
+    <p class="hero-sub">
+      Ready-to-use agent starter kits for Agent Builder and Microsoft Copilot Studio.
+      Every kit package includes a step-by-step setup &amp; evaluation guide, alongside pitch
+      decks and proposed knowledge files — so you can go from an idea to a working
+      &amp; evaluated agent in minutes.
+    </p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#kits">Browse the kits →</a>
+      <a class="btn btn-ghost" href="https://github.com/microsoft/frontier-agent-starter-kits" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
+    <div class="hero-stats">
+      <a class="hero-stat-link" href="#kits"><strong>1</strong><span>Kit available →</span></a>
+      <div class="hero-stat-link"><strong>35</strong><span>On the roadmap</span></div>
+      <div class="hero-stat-link"><strong>Free</strong><span>Download &amp; go</span></div>
+      <div class="hero-stat-link"><strong>No-code</strong><span>Ready to deploy</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== KITS -->
+<section class="band kits-band" id="kits">
+  <div class="wrap">
+    <p class="eyebrow center">The catalog</p>
+    <h2 class="section-title center">Pick a kit, download, ship</h2>
+    <p class="section-lead center">
+      Each card links to a GitHub page where you install the ZIP. Unzip the folder for the
+      setup &amp; evaluation guide, and follow instructions to stand up your very own agent.
+    </p>
+
+    <div class="kits-grid">
+      <!-- Live kit -->
+      <a class="kit-card" href="https://github.com/microsoft/frontier-agent-starter-kits/releases" target="_blank" rel="noopener" style="--c:#0078d4">
+        <span class="kit-badge">Available</span>
+        <span class="kit-icon">📝</span>
+        <h3>Job Description Agent</h3>
+        <p>Gives HR teams a single, guided conversational experience to draft, standardize, and refine job descriptions.</p>
+        <span class="kit-cta">Download on GitHub <span class="arrow">↗</span></span>
+      </a>
+
+      <!-- Placeholder kit -->
+      <div class="kit-card kit-card--soon" style="--c:#8661c5">
+        <span class="kit-badge kit-badge--soon">Coming soon</span>
+        <span class="kit-icon">✨</span>
+        <h3>More kits in progress</h3>
+        <p>Additional Copilot Studio agent starter kits are actively in development. Check back soon.</p>
+        <span class="kit-cta kit-cta--muted">In development</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== FOOTER -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand">🚀 Frontier Firm Agent Starter Kits</div>
+    <div class="footer-sub">
+      <svg class="ms-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" aria-hidden="true" focusable="false">
+        <path fill="#F25022" d="M1 1h10v10H1z"/>
+        <path fill="#7FBA00" d="M12 1h10v10H12z"/>
+        <path fill="#00A4EF" d="M1 12h10v10H1z"/>
+        <path fill="#FFB900" d="M12 12h10v10H12z"/>
+      </svg>by Microsoft
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Simple persisted light/dark toggle.
+  (function () {
+    const root = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('ffask-theme');
+    if (saved) root.setAttribute('data-theme', saved);
+    toggle.addEventListener('click', function () {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('ffask-theme', next);
+    });
+  })();
+</script>
+</body>
+</html>
