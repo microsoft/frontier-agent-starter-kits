@@ -427,3 +427,6 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Local agent BOM source files and built kit ZIPs (published as GitHub Release assets, never committed)
+agent-boms/
